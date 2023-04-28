@@ -35,7 +35,7 @@ class Email:
         return self.__contrasenia == contrasenia
 
     def cambiar_contrasenia(self, pass_actual, pass_nueva):
-        if self.__contrasenia == pass_actual:
+        if self.validar_contrasenia(pass_actual):
             self.__contrasenia = pass_nueva
 
     def saludo(self, nombre):
