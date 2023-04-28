@@ -3,7 +3,6 @@
 POO 2023 - Unidad 02 Ejercicio 01
 Luna Juan Marcelo
 DNI 24234578
-
 @author: elpocitano@gmail.com
 """
 import re
@@ -32,15 +31,12 @@ class Email:
     def get_dominio(self):
         return self.__dominio
 
-    def cambiar_contrasenia(self):
-        pass_actual = input(
-            "Ingrese la contraseña actual (por defecto es contraseña: ")
+    def validar_contrasenia(self,contrasenia):
+        return self.__contrasenia == contrasenia
+
+    def cambiar_contrasenia(self, pass_actual, pass_nueva):
         if self.__contrasenia == pass_actual:
-            pass_nueva = input("Ingrese la nueva contraseña: ")
             self.__contrasenia = pass_nueva
-            print("Contraseña actualizada!!")
-        else:
-            print("La contraseña ingresada no coincide!!")
 
     def saludo(self, nombre):
         print(

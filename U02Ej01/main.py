@@ -22,7 +22,13 @@ if __name__ == '__main__':
     email1.saludo(nombre)
 
     print("02- Para la instancia creada en el ítem anterior, modificar la contraseña")
-    email1.cambiar_contrasenia()
+    pass_actual = input("Ingrese la contraseña actual (por defecto es contraseña: ")
+    if email1.validar_contrasenia(pass_actual):
+        pass_nueva = input("Ingrese la nueva contraseña: ")
+        email1.cambiar_contrasenia(pass_actual, pass_nueva)
+        print("Contraseña actualizada!!")
+    else:
+        print("La contraseña ingresada no coincide!!")
 
     print("03- Crear un objeto de clase Email, a partir de una dirección de correo")
     email2 = Email()
@@ -57,3 +63,6 @@ if __name__ == '__main__':
             print("Email: ", email.retorna_email())
             dominio_contador += 1
     print(f"Se encontraron {dominio_contador} cuentas con el dominio {dominio}.")
+
+    print("05 - Implementar una clase de pruebas, en este caso, pytestt.")
+    pytestt
